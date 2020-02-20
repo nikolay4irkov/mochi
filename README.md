@@ -1,6 +1,6 @@
 # Gulp HTML starter
 
-> Develop html layouts using gulp
+> Develop html layouts using gulp.
 Based on Ahmad Awaish [WPGulp starter](https://github.com/ahmadawais/WPGulp)
 
 ### Author
