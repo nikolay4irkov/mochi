@@ -1,0 +1,29 @@
+.soc-nav {
+  .soc-icon {
+    + .soc-icon {
+      margin-left: 22px;
+    }
+  }
+}
+
+.soc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  background-color: $cl-bg;
+  color: $cl-dark;
+  &:hover {
+    color: $cl-dark;
+    opacity: 0.7;
+  }
+}
+
+.footer-copyright {
+  font-size: 13px;
+  a {
+    color: inherit;
+  }
+}

@@ -1,0 +1,90 @@
+* {
+	-webkit-font-smoothing: antialiased
+}
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	@include txt-def;
+	position: relative;
+	color: $cl-main;
+	background-color: $cl-light;
+	overflow-x: hidden;
+	min-height: 100vh;
+	max-width: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $cl-text;
+	border-radius: 0.25rem;
+}
+
+::selection {
+  color: $cl-light;
+  background: $cl-text;
+} 
+
+[role="button"] {
+	cursor: pointer;
+}
+
+a {
+	@include trn-03;
+	color: $cl-acc-1;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.svg-icon {
+	max-width: 16px;
+	max-height: 16px;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.flex-align-center {
+	@include flex-align-center;
+}
+
+.flex-justify-center {
+	@include flex-justify-center;
+}
+
+.list-reset {
+	@include list-reset;
+}
+
+.bg-cover {
+	@include bg-cover;
+}
+
+.bg-contain {
+	@include bg-contain;
+}
+
+.container-1,
+.container-2 {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-1 {
+	max-width: 486px;
+}
+
+.container-2 {
+	max-width: 434px;
+}

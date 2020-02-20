@@ -1,0 +1,19 @@
+.ttl-1 {
+  @include txt-ttl-1;
+}
+
+.ttl-2 {
+  @include txt-ttl-2;
+}
+
+.txt-def {
+  @include txt-def;
+}
+
+.editor-content {
+  p {
+    + p {
+      margin-top: 24px;
+    }
+  }
+}
