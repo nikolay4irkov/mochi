@@ -23,13 +23,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $cl-text;
+  background: $cl-main;
 	border-radius: 0.25rem;
 }
 
 ::selection {
   color: $cl-light;
-  background: $cl-text;
+  background: $cl-main;
 } 
 
 [role="button"] {
@@ -38,7 +38,7 @@ body {
 
 a {
 	@include trn-03;
-	color: $cl-acc-1;
+	color: $cl-acc-2;
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
@@ -46,8 +46,8 @@ a {
 }
 
 .svg-icon {
-	max-width: 16px;
-	max-height: 16px;
+	width: 24px;
+	height: 24px;
 }
 
 .cursor-pointer {
@@ -74,17 +74,7 @@ a {
 	@include bg-contain;
 }
 
-.container-1,
-.container-2 {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.container-1 {
-	max-width: 486px;
-}
-
-.container-2 {
-	max-width: 434px;
+.app-main {
+	padding-top: $header-height;
+	padding-bottom: $footer-height;
 }

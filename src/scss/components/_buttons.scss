@@ -1,8 +1,8 @@
-.ww-btn {
+.mc-btn {
   @include trn-03;
   @include btn-reset;
   @include btn-align;
-  @include btn-corners;
+  @include btn-corners-def;
   @include btn-def;
   &.btn-main {
     @include btn-main;

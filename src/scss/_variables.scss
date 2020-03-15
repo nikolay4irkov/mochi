@@ -1,62 +1,50 @@
 // Colors
 $cl-light: #fff;
-$cl-text: #8B949E;
-$cl-dark: #000000;
-$cl-main: #576372;
-$cl-main-2: #79828C;
-$cl-main-muted: #BDC2C9;
-$cl-bg: #EFF5F9;
+$cl-main: #1E2E4F;
+$cl-sec: #44516F;
+$cl-sec-muted: #979EAC;
+$cl-bg: #F4F8FF;
 
-$cl-acc-1: #E27DB1;
-$cl-acc-2: #7A68AD;
+$cl-acc-1: #00D489;
+$cl-acc-2: #267DFF;
 
 // Fonts
-$font-title: 'Gotham', sans-serif;
-$font-main: 'Gotham', sans-serif;
+$font-title: 'Avenir Next', sans-serif;
+$font-main: 'Avenir Next', sans-serif;
 
 // Misc
-$input-height-def: 46px;
+$input-height-def: 58px;
+$input-height-sm: 38px;
 $bord-rad-def: calc(#{$input-height-def} / 2);
+$bord-rad-sm: calc(#{$input-height-sm} / 2);
+$header-height: 64px;
+$footer-height: 42px;
 
 // Mixins
 @mixin base-font {
   font-family: $font-main;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-
-@mixin title-font {
-  font-family: $font-title;
-  font-weight: 500; 
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-weight: normal;
 }
 
 @mixin txt-ttl-1 {
-  @include title-font;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.29;
   @media (min-width: 768px) {
-    font-size: 46px;
+    font-size: 48px;
   }
 }
 
 @mixin txt-ttl-2 {
-  @include title-font;
-  font-size: 26px;
-  @media (min-width: 768px) {
-    font-size: 42px;
-  }
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
 }
 
 @mixin txt-def {
   @include base-font;
   font-size: 16px;
-  &.mod-l {
-    font-size: 14px;
-    @media (min-width: 768px) {
-      font-size: 18px;
-    }
-  }
+  line-height: 1.62;
 }
 
 @mixin trn-03 {
@@ -115,20 +103,40 @@ $bord-rad-def: calc(#{$input-height-def} / 2);
   vertical-align: middle;
 }
 
-@mixin btn-corners {
+@mixin btn-corners-def {
   border-radius: calc(#{$input-height-def} / 2);
 }
 
+@mixin btn-corners-sm {
+  border-radius: calc(#{$input-height-sm} / 2);
+}
+
 @mixin btn-def {
-  padding: 5px 12px;
+  padding: 18px 36px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: bold;
   min-height: $input-height-def;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+@mixin btn-sm {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: bold;
+  min-height: $input-height-sm;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.08);
 }
 
 @mixin btn-main {
   color: $cl-light;
-  background: linear-gradient(270deg, $cl-acc-2 4.03%, $cl-acc-1 100%);
+  background-color: $cl-acc-1;
+  &:active,
+  &:focus,
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 @mixin txt-fld {
@@ -141,13 +149,13 @@ $bord-rad-def: calc(#{$input-height-def} / 2);
     outline: none;
   }
   &::-webkit-input-placeholder {
-    color: $cl-main-muted;
+    color: $cl-sec-muted;
   }
 }
 
 @mixin txt-fld-def {
-  background-color: $cl-bg;
-  color: $cl-main;
+  background-color: rgba($cl-acc-2, 0.05);
+  color: $cl-sec;
 }
 
 @mixin txt-fld-size-md {

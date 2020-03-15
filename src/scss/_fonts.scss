@@ -1,17 +1,26 @@
 @font-face {
-  font-family: 'Gotham';
-  src: url('../fonts/Gotham-Medium.woff2') format('woff2'),
-      url('../fonts/Gotham-Medium.woff') format('woff'),
-      url('../fonts/Gotham-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: 'Avenir Next';
+  src: url('../fonts/AvenirNext-Black.woff2') format('woff2'),
+      url('../fonts/AvenirNext-Black.woff') format('woff'),
+      url('../fonts/AvenirNext-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham';
-  src: url('../fonts/Gotham-Book.woff2') format('woff2'),
-      url('../fonts/Gotham-Book.woff') format('woff'),
-      url('../fonts/Gotham-Book.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Avenir Next';
+  src: url('../fonts/AvenirNext-Bold.woff2') format('woff2'),
+      url('../fonts/AvenirNext-Bold.woff') format('woff'),
+      url('../fonts/AvenirNext-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/AvenirNext-Regular.woff2') format('woff2'),
+      url('../fonts/AvenirNext-Regular.woff') format('woff'),
+      url('../fonts/AvenirNext-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }

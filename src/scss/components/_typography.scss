@@ -17,3 +17,28 @@
     }
   }
 }
+
+.mc-list {
+  @include list-reset;
+  li {
+    padding-top: 4px;
+    position: relative;
+    padding-left: 60px;
+    &:before {
+      content:  '⬤';
+      color: $cl-acc-1;
+      display: inline-flex;
+      font-size: 36px;
+      line-height: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    + li {
+      margin-top: 20px;
+      @media (min-width: 768px) {
+        margin-top: 40px;
+      }
+    }
+  }
+}
