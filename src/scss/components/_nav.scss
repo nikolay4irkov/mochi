@@ -11,11 +11,26 @@
     color: $cl-sec-muted;
     border-top: 2px solid transparent;
     flex: 1 1 0;
-    opacity: 0.5;
     &.active {
-      opacity: 1;
       color: $cl-acc-2;
       border-color: $cl-acc-2;
+    }
+  }
+  &.mod-icons {
+    .app-nav--item {
+      opacity: 0.5;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  &.mod-top {
+    .app-nav--item {
+      border-top: none;
+      border-bottom: 2px solid transparent;
+      &.active {
+        border-color: $cl-acc-2;
+      }
     }
   }
 }
