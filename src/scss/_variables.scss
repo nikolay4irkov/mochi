@@ -1,9 +1,11 @@
 // Colors
 $cl-light: #fff;
+$cl-dark: #000;
 $cl-main: #1E2E4F;
 $cl-sec: #44516F;
 $cl-sec-muted: #979EAC;
 $cl-bg: #F4F8FF;
+$cl-fb: #3B5999;
 
 $cl-acc-1: #00D489;
 $cl-acc-2: #267DFF;
@@ -13,11 +15,12 @@ $font-title: 'Avenir Next', sans-serif;
 $font-main: 'Avenir Next', sans-serif;
 
 // Misc
-$input-height-def: 58px;
-$input-height-sm: 38px;
-$bord-rad-def: calc(#{$input-height-def} / 2);
-$bord-rad-sm: calc(#{$input-height-sm} / 2);
-$header-height: 64px;
+$input-height-lg: 56px;
+$input-height-md: 48px;
+$input-height-sm: 32px;
+$bord-rad-def: 8px;
+$bord-rad-sm: 4px;
+$header-height: 70px;
 $footer-height: 42px;
 
 // Mixins
@@ -27,24 +30,51 @@ $footer-height: 42px;
 }
 
 @mixin txt-ttl-1 {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1.29;
-  @media (min-width: 768px) {
-    font-size: 48px;
-  }
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.375;
 }
 
 @mixin txt-ttl-2 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.44;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.75;
+}
+
+@mixin txt-ttl-3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.375;
+}
+
+@mixin txt-ttl-4 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3333;
+}
+
+@mixin txt-ttl-thin {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3636;
+}
+
+@mixin txt-subttl {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3333;
 }
 
 @mixin txt-def {
   @include base-font;
-  font-size: 16px;
-  line-height: 1.62;
+  font-size: 14px;
+  line-height: 1.86;
+}
+
+@mixin txt-sm {
+  @include base-font;
+  font-size: 12px;
+  line-height: 1.3333;
 }
 
 @mixin trn-03 {
@@ -86,7 +116,7 @@ $footer-height: 42px;
   text-decoration: none;
   user-select: none;
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   &:focus {
     outline: none;
   }
@@ -104,61 +134,96 @@ $footer-height: 42px;
 }
 
 @mixin btn-corners-def {
-  border-radius: calc(#{$input-height-def} / 2);
+  border-radius: $bord-rad-def;
 }
 
 @mixin btn-corners-sm {
-  border-radius: calc(#{$input-height-sm} / 2);
+  border-radius: $bord-rad-sm;
 }
 
-@mixin btn-def {
-  padding: 18px 36px;
-  font-size: 18px;
+@mixin btn-lg {
+  padding: 12px 32px;
+  font-size: 15px;
   line-height: 1.2;
   font-weight: bold;
-  min-height: $input-height-def;
-  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.08);
+  min-height: $input-height-lg;
+}
+
+@mixin btn-md {
+  padding: 8px 32px;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: bold;
+  min-height: $input-height-md;
 }
 
 @mixin btn-sm {
   padding: 10px 20px;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: 1.3333;
   font-weight: bold;
   min-height: $input-height-sm;
-  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.08);
 }
 
-@mixin btn-main {
+@mixin btn-1 {
   color: $cl-light;
   background-color: $cl-acc-1;
-  &:active,
-  &:focus,
-  &:hover {
-    opacity: 0.9;
+  border-color: $cl-acc-1;
+  &.btn-outline {
+    background-color: transparent;
+    color: $cl-acc-1;
   }
+}
+
+@mixin btn-2 {
+  color: $cl-light;
+  background-color: $cl-acc-2;
+  border-color: $cl-acc-2;
+  &.btn-outline {
+    background-color: transparent;
+    color: $cl-acc-2;
+  }
+}
+
+@mixin btn-3 {
+  color: $cl-light;
+  background-color: $cl-dark;
+  border-color: $cl-dark;
+  &.btn-outline {
+    background-color: transparent;
+    color: $cl-dark;
+  }
+}
+
+@mixin btn-fb {
+  color: $cl-light;
+  background-color: $cl-fb;
+  border-color: $cl-fb;
 }
 
 @mixin txt-fld {
   -webkit-appearance: none;
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  border-radius: $bord-rad-def;
   border: 1px solid transparent;
   &:focus {
     outline: none;
-  }
-  &::-webkit-input-placeholder {
-    color: $cl-sec-muted;
   }
 }
 
 @mixin txt-fld-def {
   background-color: rgba($cl-acc-2, 0.05);
   color: $cl-sec;
+  &::-webkit-input-placeholder {
+    color: $cl-sec-muted;
+  }
 }
 
 @mixin txt-fld-size-md {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: $input-height-md;
+  border-radius: $bord-rad-def;
 }

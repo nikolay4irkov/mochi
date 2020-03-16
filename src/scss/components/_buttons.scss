@@ -3,8 +3,39 @@
   @include btn-reset;
   @include btn-align;
   @include btn-corners-def;
-  @include btn-def;
-  &.btn-main {
-    @include btn-main;
+  @include btn-md;
+  &.btn-lg {
+    @include btn-lg;
+  }
+  &.btn-md {
+    @include btn-md;
+  }
+  &.btn-sm {
+    @include btn-sm;
+  }
+  &.btn-1 {
+    @include btn-1;
+  }
+  &.btn-2 {
+    @include btn-2;
+  }
+  &.btn-3 {
+    @include btn-3;
+  }
+  &.btn-fb {
+    @include btn-fb;
+  }
+}
+
+.btn-link {
+  @include trn-03;
+  @include btn-reset;
+  @include btn-align;
+  @include txt-ttl-4;
+  padding: 0;
+  border: none;
+  color: $cl-acc-2;
+  &.disabled {
+    color: $cl-sec-muted;
   }
 }

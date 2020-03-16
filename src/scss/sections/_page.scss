@@ -1,0 +1,8 @@
+.success-badge {
+  display: inline-block;
+  color: $cl-light;
+  padding: 12px 24px;
+  background: rgba($cl-light, 0.1);
+  border: 2px solid $cl-light;
+  border-radius: $bord-rad-def;
+}

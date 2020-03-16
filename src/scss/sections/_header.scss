@@ -1,5 +1,5 @@
 .app-header {
-  padding: 22px 16px 16px;
+  padding: 22px 16px;
   position: fixed;
   z-index: 10;
   left: 0;
@@ -18,6 +18,19 @@
     margin-left: auto;
     a {
       color: $cl-sec;
+    }
+  }
+}
+
+.header-white {
+  .app-header {
+    &--logo {
+      color: $cl-light;
+    }
+    &--actions {
+      a {
+        color: $cl-light;
+      }
     }
   }
 }

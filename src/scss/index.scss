@@ -6,13 +6,17 @@
 @import "variables";
 @import "base";
 @import "fonts";
+@import "colors";
 
 // Components
 @import "components/buttons";
 @import "components/typography";
 @import "components/forms";
+@import "components/nav";
+@import "components/list";
 
 // Sections
 @import "sections/header";
 @import "sections/footer";
+@import "sections/hero";
 @import "sections/page";

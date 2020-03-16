@@ -1,0 +1,14 @@
+.app-hero {
+  padding-top: $header-height;
+  &.mod-color {
+    background-color: $cl-acc-1;
+    background-image: url(../../img/app-bg-lines.png);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    color: $cl-light;
+  }
+  &--inner {
+    padding: 16px;
+  }
+}

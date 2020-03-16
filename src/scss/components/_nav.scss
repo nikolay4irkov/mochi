@@ -1,0 +1,21 @@
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.12);
+  background-color: $cl-light;
+  &--item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: $cl-sec-muted;
+    border-top: 2px solid transparent;
+    flex: 1 1 0;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+      color: $cl-acc-2;
+      border-color: $cl-acc-2;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.app-list {
+  &--item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: $bord-rad-sm;
+    min-height: $input-height-lg;
+    &-body {
+      padding-left: 12px;
+      padding-right: 12px;
+      flex: 0 1 auto;
+    }
+    &-actions {
+      margin-left: auto;
+      flex: 0 1 auto;
+    }
+  }
+  &.striped {
+    .app-list--item {
+      &:nth-child(even) {
+        background-color: $cl-bg;
+      }
+    }
+  }
+}
+
+.mc-avatar {
+  display: block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  border-radius: 100%;
+  img {
+    min-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  &.mod-lg {
+    width: 38px;
+    height: 38px;
+  }
+}

@@ -3,7 +3,7 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 14px;
 	scroll-behavior: smooth;
 }
 
@@ -38,7 +38,8 @@ body {
 
 a {
 	@include trn-03;
-	color: $cl-acc-2;
+	color: $cl-acc-1;
+	font-weight: bold;
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
@@ -77,4 +78,8 @@ a {
 .app-main {
 	padding-top: $header-height;
 	padding-bottom: $footer-height;
+	min-height: 100vh;
+	&.mod-hero {
+		padding-top: 0;
+	}
 }

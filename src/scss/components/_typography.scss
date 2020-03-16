@@ -6,8 +6,24 @@
   @include txt-ttl-2;
 }
 
+.ttl-3 {
+  @include txt-ttl-3;
+}
+
+.ttl-4 {
+  @include txt-ttl-4;
+}
+
+.ttl-thin {
+  @include txt-ttl-thin;
+}
+
 .txt-def {
   @include txt-def;
+}
+
+.txt-sm {
+  @include txt-sm;
 }
 
 .editor-content {
