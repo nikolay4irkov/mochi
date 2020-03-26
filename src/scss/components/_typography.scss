@@ -8,6 +8,10 @@
 
 .ttl-3 {
   @include txt-ttl-3;
+
+  span {
+    font-weight: normal;
+  }
 }
 
 .ttl-4 {
@@ -16,6 +20,18 @@
 
 .ttl-thin {
   @include txt-ttl-thin;
+}
+
+.ttl-tab {
+  color: $cl-sec-muted;
+  padding-bottom: 16px;
+  margin-right: 43px;
+  border-bottom: 2px solid transparent;
+
+  &.is-active, &:hover {
+    color: $cl-main;
+    border-bottom: 2px solid $cl-acc-2;
+  }
 }
 
 .txt-def {

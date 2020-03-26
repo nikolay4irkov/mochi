@@ -75,11 +75,6 @@ a {
 	@include bg-contain;
 }
 
-.app-main {
-	padding-top: $header-height;
-	padding-bottom: $footer-height;
-	min-height: 100vh;
-	&.mod-hero {
-		padding-top: 0;
-	}
+main {
+	padding: 35px 24px 24px;
 }

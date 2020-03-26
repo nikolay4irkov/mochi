@@ -1,0 +1,40 @@
+.badge {
+  background: #349B76;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  position: relative;
+  padding: 16px 15px 15px 58px;
+  color: $white;
+  margin-bottom: 32px;
+}
+
+.badge__img {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  border: 2px solid #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+}
+
+.badge__name {
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+}
+
+.badge__sum {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}

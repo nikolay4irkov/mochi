@@ -30,8 +30,8 @@ $footer-height: 42px;
 }
 
 @mixin txt-ttl-1 {
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 700;
   line-height: 1.375;
 }
 
@@ -48,7 +48,7 @@ $footer-height: 42px;
 }
 
 @mixin txt-ttl-4 {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.3333;
 }
@@ -221,9 +221,9 @@ $footer-height: 42px;
 }
 
 @mixin txt-fld-size-md {
-  padding: 14px 16px;
-  font-size: 14px;
+  padding: 4px 16px;
+  font-size: 12px;
   font-weight: 600;
-  min-height: $input-height-md;
+  //min-height: $input-height-md;
   border-radius: $bord-rad-def;
 }

@@ -3,24 +3,49 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 8px 16px;
+    //padding: 8px 16px;
+    padding: 8px 24px 8px 16px;
     border-radius: $bord-rad-sm;
     min-height: $input-height-lg;
     &-body {
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-left: 16px;
+      padding-right: 16px;
       flex: 0 1 auto;
     }
     &-actions {
       margin-left: auto;
       flex: 0 1 auto;
+
+      .btn-link {
+        text-transform: capitalize;
+      }
+
     }
   }
   &.striped {
     .app-list--item {
-      &:nth-child(even) {
+      &:nth-child(odd) {
         background-color: $cl-bg;
       }
     }
   }
+}
+
+.app-list--item--main {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+}
+
+.app-list--item--activity {
+  padding-left: 0;
+
+  .app-list--item-body {
+    padding-left: 8px;
+  }
+}
+
+
+.gmail-logo {
+  width: 27px;
+  height: 20px;
 }
